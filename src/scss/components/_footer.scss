@@ -1,0 +1,91 @@
+footer {
+    background: $color-primary;
+    margin-top: 7rem;
+    padding-top: 7rem;
+    font-size: 0.9rem;
+    color: $color-gray-100;
+    
+    .footer__container {
+        display: grid;
+        grid-template-columns: 26rem 1fr 1fr 1fr;
+        gap: 4rem;
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.7rem;
+
+                p {
+                    margin-top: 0.5rem;
+                }
+
+                h4 {
+                    margin-bottom: 0.6rem;
+                    font-size: 1rem;
+                }
+
+                .footer__socials {
+                    margin-top: 1.5rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    a {
+                        background: $color-gray-100;
+                        padding: 0.7rem;
+                        border: 1px solid transparent;
+                        border-radius: 0.6rem;
+                        transition: $transition;
+
+                        svg {
+                            color: $color-gray-600
+                        }
+
+                        &:hover {
+                            border-color: $color-gray-100;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            a:hover {
+                color: $color-secondary;
+            }
+        }
+    .footer__copyright {
+        color: $color-gray-100;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-top: 2px solid $color-primary-variant;
+        margin-top: 5rem;
+    }
+}
+
+// Media Queries (medium  screens)
+@media screen and (max-width:1024px) {
+footer {
+        .footer__container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+    footer {
+        .footer__container {
+            grid-template-columns: 1fr ;
+            article {
+                align-items: center;
+                p {
+                    text-align: center;
+                }
+
+                h4 {
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

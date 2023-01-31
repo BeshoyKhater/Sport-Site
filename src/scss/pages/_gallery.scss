@@ -1,0 +1,25 @@
+.gallery {
+    .gallery__container {
+        article {
+            border: .5rem solid transparent;
+            transition: $transition;
+
+            &:hover {
+                border-color: $color-gray-500;
+            }
+        }
+    }
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+    .gallery {
+        .gallery__container {
+            article {
+                margin-inline: auto;
+                border: none;
+                width: 85%;
+            }
+        }
+    }
+}

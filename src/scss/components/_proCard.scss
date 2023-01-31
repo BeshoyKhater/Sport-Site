@@ -1,0 +1,41 @@
+.pro-card {
+    background: $color-gray-500;
+    border-radius: 0 3rem 0 3rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: $transition;
+
+    &:hover {
+        background: transparent;
+        border-color: $color-gray-400;
+        cursor: default;
+    }
+
+    span {
+        width: 3rem;
+        height: 3rem;
+        background: $color-primary;
+        color: $color-gray-100;
+        font-size: 1.5rem;
+        padding: 0.8rem;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1.5rem;
+        margin-inline: auto;
+        border-radius: 1rem;
+        transition: $transition;
+
+    }
+
+    &:hover span {
+        background: $color-secondary;
+        color: $color-gray-600;
+    }
+
+    small {
+        margin-top: 1rem;
+        display: block;
+        font-weight: 300;
+    }
+}

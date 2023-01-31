@@ -1,0 +1,85 @@
+*, *::before , *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none ;
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif ;
+    color: $color-gray-200 ;
+    line-height: 1.7 ;
+    overflow-x: hidden ;
+    background-color: $color-gray-600 ;
+}
+
+.container {
+    width: $container-width-lg;
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+h1,h2,h3,h4,h5 {
+    line-height: $line-height-heading;
+    color: $color-gray-100;
+}
+
+a {
+    color: $color-gray-100 ;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.Btn {
+    @include Btn;
+}
+
+.Btn_lg {
+    @include Btn_lg ;
+}
+
+.Btn_sm {
+    @include Btn_sm ;
+}
+
+section {
+    margin-top: 5rem;
+}
+
+
+.logo {
+    width: 8rem;
+    display: block;
+}
+
+// Media Queries (medium  screens)
+@media screen and (max-width:1024px) {
+    .container {
+        width: $container-width-md;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}

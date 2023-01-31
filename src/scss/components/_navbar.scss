@@ -1,0 +1,136 @@
+nav {
+    height:4.5rem ;
+    width: 100vw;
+    background: $color-primary;
+    display: grid;
+    place-items: center;
+    z-index: 99;
+
+    .nav__container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .nav__links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 0;
+
+            li a {
+                transition: $transition;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        .nav__toggle-btn {
+            display: none;
+        }
+    }
+}
+
+.active-nav {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1.2rem;
+        width: 1.2rem;
+        background-color: $color-primary;
+        display: block;
+        left: calc(50% - 0.5rem);
+        transform: rotate(45deg);
+        margin-top: 0.55rem;
+    }
+}
+
+// Media Queries (medium and small screens)
+@media screen and (max-width:1024px) {
+    .active-nav {
+        display: none;
+
+        &::after {
+            display: none;
+        }
+    }
+    nav {
+        .nav__container {
+            .nav__toggle-btn {
+                display: inline-block;
+                background: transparent;
+                font-size: 1.8rem;
+                cursor: pointer;
+                color: $color-gray-100;
+            }
+
+            .nav__links {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                perspective: 400px;
+
+                li {
+                    height: 4rem;
+                    width: 100%;
+                    box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.4);
+                    animation: navAnimation 600ms ease forwards;
+                    transform: rotateX(90deg);
+                    opacity: 0;
+                    transform-origin: top;
+
+                    &:nth-child(2) {
+                        animation-delay: 200ms;
+                    }
+
+                    &:nth-child(3) {
+                        animation-delay: 400ms;
+                    }
+
+                    &:nth-child(4) {
+                        animation-delay: 600ms;
+                    }
+
+                    &:nth-child(5) {
+                        animation-delay: 800ms;
+                    }
+
+                    &:nth-child(6) {
+                        animation-delay: 1s;
+                    }
+
+                    //Animation
+                    @keyframes navAnimation {
+                        to {
+                            transform: rotateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    a {
+                        background: $color-primary;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 1rem 5rem 1rem 3rem;
+                    }
+                }
+            }
+        }
+    }
+    //class show links and hide
+    .show_nav {
+        display: flex !important ;
+    }
+    
+    .hide_nav {
+        display: none !important;
+    }
+}

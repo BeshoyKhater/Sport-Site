@@ -1,0 +1,27 @@
+//Colors
+$primary-hue:210;
+$gray-hue:240;
+
+$color-primary:hsl(($primary-hue),100%,50%);
+$color-primary-variant:hsl(($primary-hue),100%,65%);
+$color-secondary:#ffb116;
+$color-gray-100:hsl(($gray-hue),47%,94%);
+$color-gray-200:hsl(($gray-hue),26%,75%);
+$color-gray-300:hsl(($gray-hue),24%,64%);
+$color-gray-400:hsl(($gray-hue),16%,41%);
+$color-gray-500:hsl(($gray-hue),44%,25%);
+$color-gray-600:hsl(($gray-hue),48%,15%);
+
+//container
+$container-width-lg:85%;
+$container-width-md:90%;
+
+//transition
+$transition:all 500ms ease;
+
+//font-size
+$font-size-h1:3rem;
+$font-size-h2:2rem;
+
+//line-height
+$line-height-heading:1.2;

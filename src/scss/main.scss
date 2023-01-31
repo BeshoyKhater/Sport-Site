@@ -1,0 +1,27 @@
+//variables and mixins
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+//layout
+@import "./layout/grid";
+
+//base
+@import "./base/typography";
+@import "./base/reset";
+
+//components
+@import "./components/navbar";
+@import "./components/sectionHead";
+@import "./components/proCard";
+@import "./components/footer";
+@import "./components/header";
+
+
+//pages
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/gallery";
+@import "./pages/home";
+@import "./pages/plans";
+@import "./pages/trainers";
+@import "./pages/notfound";

@@ -1,0 +1,40 @@
+.contact__container {
+    display: grid;
+    place-items: center;
+
+    .contact__wrapper {
+        width: fit-content;
+        display: flex;
+        gap: 2rem;
+
+        a {
+            background: $color-primary;
+            font-size: 2rem;
+            border: 2px solid transparent;
+            transition: $transition;
+            padding: 2rem;
+            border-radius: 1.5rem;
+
+            &:hover {
+                background: transparent;
+                border-color: $color-gray-100;
+                color: $color-gray-100;
+            }
+        }
+    }
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+    .contact__container {
+        .contact__wrapper {
+            gap: 1.5rem;
+
+            a {
+                padding: 1rem;
+                font-size: 1.2rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}

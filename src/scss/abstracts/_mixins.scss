@@ -1,0 +1,46 @@
+@mixin Btn {
+    color: $color-gray-100;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    background: $color-primary;
+    border-radius: 1.5rem;
+    transition: $transition;
+
+    &:hover {
+        background: $color-secondary;
+        color: $color-gray-600;
+    }
+}
+
+@mixin Btn_lg {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    color: $color-gray-100;
+    width: fit-content;
+    margin: 0 auto;
+    background: $color-primary;
+    transition: $transition;
+
+    &:hover {
+    background: $color-secondary;
+    color: $color-gray-600;
+    }
+}
+
+@mixin Btn_sm {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 1.5rem;
+    color: $color-gray-100;
+    width: fit-content;
+    margin: 0 auto;
+    background: $color-primary;
+    transition: $transition;
+
+    &:hover {
+        background: $color-gray-100;
+        color: $color-gray-600;
+    }
+}

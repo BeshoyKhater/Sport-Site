@@ -1,0 +1,46 @@
+.plans {
+    .plans__container {
+        .plan {
+            // width: 30%;
+
+            h3 {
+                margin-bottom: 0.8rem;
+            }
+
+            small {
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                color: $color-primary-variant;
+                display: inline;
+            }
+
+            h2 {
+                display: inline;
+                color: $color-gray-400;
+            }
+
+            p {
+                color: $color-gray-100;
+                margin-top: 1rem;
+
+            }
+            .disabled {
+                color: $color-gray-400;
+            }
+        }
+    }
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+.plans {
+    .plans__container {
+        .plan {
+            width: 90%;
+            margin-inline: auto;
+        }
+    }
+}
+}

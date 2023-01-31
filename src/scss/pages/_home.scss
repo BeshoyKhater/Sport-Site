@@ -1,0 +1,266 @@
+// =============================== Main Header =========================
+.main__header {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 6rem;
+
+    .main__header-left {
+        margin-top: -3rem;
+
+        h1 {
+            font-weight: bold;
+        }
+
+        h4 {
+            margin-bottom: 1rem;
+            color: $color-secondary;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .main__header-right {
+        place-items: center;
+        position: relative;
+        display: grid;
+
+        &:hover .main__header-circle {
+            filter: blur(10px);
+        }
+
+        .main__header-circle {
+            position: absolute;
+            height: 22rem;
+            width: 22rem;
+            background: linear-gradient(75deg, $color-secondary, transparent);
+            border-radius: 50%;
+            transition: $transition;
+        }
+
+        .main__header-image {
+            position: relative;
+        }
+    }
+}
+
+// =============================== Programs =========================
+.programs {
+    margin-top: 4rem;
+
+    .programs__wrapper {
+        margin-top: 4rem;
+
+        .programs__program {
+            h4 {
+                font-size: 1.4rem;
+            }
+            a {
+                margin-top: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover a {
+                background: $color-secondary;
+                color: $color-gray-600;
+            }
+        }
+    }
+}
+
+// =============================== Values =========================
+.values {
+    .values__container {
+        // justify-content: space-between;
+
+
+        .values__left {
+            .values__image {
+                filter: saturate(0.25);
+                transition: $transition;
+
+                &:hover {
+                    filter: saturate(1);
+                }
+            }
+        }
+
+        .values__right {
+            p {
+                margin: 1.5rem 0 5rem;
+            }
+
+            .values__wrapper {
+                .values__value {
+                    position: relative;
+                    text-align: left;
+
+                    span {
+                        position: absolute;
+                        top: -1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ============================= FAQs ==========================
+.faqs {
+    .faqs__container {
+        .faqs__wrapper {
+            margin-top: 4rem;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .faq {
+                background: $color-gray-500;
+                padding: 2rem;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .faq_icon {
+                        background: transparent;
+                        color: $color-gray-100;
+                        font-size: 1.5rem;
+                        transition: $transition;
+                    }
+                }
+
+                p {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+// ============================= Testimonials ==========================
+.testimonials {
+    width: 80%;
+    margin-inline: auto;
+
+    .testimonials__container {
+        .testimonials__head {
+            justify-content: center;
+        }
+
+        .pro-card.testimonials {
+            position: relative;
+            text-align: left;
+            margin-top: 5rem;
+
+            .testimonials__avatar {
+                height: 4rem;
+                width: 4rem;
+                border-radius: 1.5rem;
+                border: 2px solid transparent;
+                overflow: hidden;
+                position: absolute;
+                top: -2rem;
+                left: calc(50% - 2rem);
+                box-shadow: 0 1.5rem 2rem rgba(26,26,54,0.4);
+                transition: $transition;
+            }
+            &:hover .testimonials__avatar {
+                border-radius: 50%;
+                border-color: $color-gray-400;
+            }
+
+            p {
+                font-style: italic;
+                margin: 1rem 0 2rem;
+            }
+
+            small {
+                margin-top: 0.3rem;
+            }
+        }
+
+        .testimonails__btn-container {
+            width: fit-content;
+            margin: 2.5rem auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            button {
+                background: transparent;
+                cursor: pointer;
+
+                svg {
+                    fill: $color-primary;
+                    font-size: 1.8rem;
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries (medium  screens)
+@media screen and (max-width:1024px) {
+    // Main Header
+    .main__header {
+        height: fit-content;
+        padding: 6rem 0 0 0 ;
+
+        .main__header-right {
+            .main__header-circle {
+                height: 16rem;
+                width: 16rem;
+            }
+        }
+    }
+    .testimonials {
+        width: 90%;
+    }
+}
+
+// Media Queries (small screens)
+@media screen and (max-width:600px) {
+    .programs {
+        .programs__wrapper {
+                .programs__program {
+                    margin-inline: auto;
+                    width: 90%;
+                }
+            }
+    }
+
+.values {
+    .values__container {
+        .values__right {
+            .values__wrapper {
+                width: 87%;
+                margin:0 auto;
+                .values__value {
+                    position: relative;
+                    text-align: left;
+
+                    span {
+                        position: absolute;
+                        top: -1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    .testimonials {
+        width: 100%;
+    }
+}
