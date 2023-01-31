@@ -6,7 +6,6 @@ import { AiOutlineTwitter } from "react-icons/ai"
 import { FaFacebookF } from "react-icons/fa"
 import { FaLinkedinIn } from "react-icons/fa"
 import Trainer from "../../components/Trainer"
-import { icons } from "react-icons"
 
 const Trainers = () => {
   return (
